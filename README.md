@@ -1,4 +1,11 @@
 # JumiaFE
+## How to boot up the FE.
+### git clone the repository.
+### navigate to the project directory
+### execute npm run build:ssr (to build the angular project)
+### exetute npm run serve:ssr (to serve the app on port 4000)
+---
+## The project is live on google appEngine https://deploymenttest-313512.uc.r.appspot.com
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
