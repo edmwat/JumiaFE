@@ -12,13 +12,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
+    MatPaginatorModule,
     FlexLayoutModule
   ],
   providers: [],

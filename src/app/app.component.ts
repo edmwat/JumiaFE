@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PageEvent } from '@angular/material/paginator';
 import { CountriesFactoryService } from './services/countries-factory.service';
 import { CustomersService } from './services/customers.service';
 
@@ -20,12 +21,19 @@ export class AppComponent {
   countries!:string[];
   dataSource !: CustomerPhoneNumbers[];
 
+  length = 100;
+  pageSize = 10;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
+  // MatPaginator Output
+  pageEvent!: PageEvent;
+
   constructor(private _formBuilder:FormBuilder, 
     private coutriesService:CountriesFactoryService,
     private customersService:CustomersService ){
   }
 
   ngOnInit(): void{
+
     this.countries = this.coutriesService.getAllCountries();
     this.customersService.getAllCustomers().subscribe(result=>{
       this.dataSource = result;

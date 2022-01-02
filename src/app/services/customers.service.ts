@@ -8,7 +8,7 @@ import { CustomerPhoneNumbers } from '../app.component';
 })
 export class CustomersService {
 
-  baseUrl:string ="http://localhost:8080/phone";
+  baseUrl:string ="https://jumiabeservice-7euq3awlba-uc.a.run.app/phone";
   
   headers = new HttpHeaders({
     'Access-Control-Allow-Origin': '*',
